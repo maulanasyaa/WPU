@@ -1,0 +1,7 @@
+div {
+  width: 300px;
+  height: 300px;
+  border-radius: 0 50% 50% 50%;
+  background: linear-gradient(to top right, rgba(255, 185, 185, 1) 30%, yellow);
+  /* contoh linear gradient (arah/deg, color 1, color 2, color...) */
+}

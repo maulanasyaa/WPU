@@ -1,0 +1,13 @@
+*
+**
+***
+****
+*****
+******
+*******
+********
+*********
+**********
+
+baris = 10
+item = jumlah nya mengikuti posisi baris (contoh = baris 1 j.item 1, baris 2 j.item 2 dst.)

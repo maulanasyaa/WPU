@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan Form</title>
+</head>
+
+<body>
+    <form>
+        <!-- gunakan table biar rapih -->
+        <table>
+            <tr>
+                <td><label for="text">text : </label></td>
+                <td><input type="text"></td>
+            </tr>
+            <tr>
+                <td><label for="password">password : </label></td>
+                <td><input type="password"></td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="radio1">radio1</label><input type="radio" id="radio1" name="radio">
+                    <label for="radio2">radio2</label><input type="radio" id="radio2" name="radio">
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <label for="check1">check1</label><input type="checkbox" id="check1">
+                    <label for="check2">check2</label><input type="checkbox" id="check2">
+                </td>
+            </tr>
+            <tr>
+                <td><label for="select">select : </label></td>
+                <td><select name="" id="select">
+                        <option>select1</option>
+                        <option>select2</option>
+                        <option>select3</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><label for="textarea">textarea : </label></td>
+                <td><textarea name="" id="textarea" cols="30" rows="10"></textarea></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button type="reset">hapus</button><br><button type="submit">kirim</button></td>
+            </tr>
+        </table>
+    </form>
+</body>
+
+</html>

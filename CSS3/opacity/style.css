@@ -1,0 +1,39 @@
+body {
+    background-image: url(y-so-serious-white.png);
+}
+
+.satu {
+    background-color: rgb(201, 201, 201);
+    width: 300px;
+    height: 300px;
+    opacity: 0.5 ;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.dua {
+    background-color: rgb(255, 101, 101);
+    width: 100px;
+    height: 100px;
+    opacity: 0.5 ;
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+}
+
+.tiga {
+    background-color: rgba(201, 201, 201, 0.5); 
+    /* rgba = red green blue alpha(opacity) */
+    width: 300px;
+    height: 300px;
+    position: relative;
+}
+
+.empat {
+    background-color: rgb(255, 101, 101);
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    right: -50px;
+    bottom: -50px;
+}

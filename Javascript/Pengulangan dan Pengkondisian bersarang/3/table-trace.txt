@@ -1,0 +1,15 @@
+**********
+ *********
+  ********
+   *******
+    ******
+     *****
+      ****
+       ***
+        **
+         *
+
+baris = 10
+empty = penambahan ' ' setiap pindah baris sebelum item
+item awal = 10
+jumlah item = berkurang saat berpindah baris (contoh baris 1 j.item 10, baris 2 j.item 9)

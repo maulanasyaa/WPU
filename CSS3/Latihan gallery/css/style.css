@@ -1,0 +1,142 @@
+/* font */
+@font-face {
+  font-family: "rubikregular";
+  src: url(../font/rubik-regular-webfont.woff2) format("woff2"),
+    url(../font/rubik-regular-webfont.woff) format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  font: 18px/36px "rubikregular", arial, sans-serif;
+  background-color: rgb(27, 27, 27);
+}
+
+h1 {
+  font-size: 80px;
+  margin: 50px 0;
+  text-align: center;
+  color: rgb(245, 245, 245);
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.container {
+  width: 600px;
+  background-color: rgb(245, 245, 245);
+  color: rgb(27, 27, 27);
+  margin: auto;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 3px 5px rgba(0, 0, 0, 0.3);
+}
+
+.gallery li {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 5px solid rgb(27, 27, 27);
+  float: left;
+  margin: 10px;
+  position: relative;
+}
+
+.gallery li img {
+  border-radius: 50%;
+}
+
+.gallery li span {
+  display: block;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: rgba(175, 175, 175, 0.3);
+  position: absolute;
+  top: 0;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(245, 245, 245);
+  text-align: center;
+  line-height: 120px;
+  opacity: 0;
+  /* transform: scale(0); */
+}
+
+.gallery li a:hover span {
+  opacity: 1;
+  /* transform: scale(1); */
+  transition: 0.3s;
+}
+
+/* overlay */
+
+.overlay {
+  width: 0;
+  height: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0);
+  z-index: 9999;
+  transition: 0.7s;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.overlay:target {
+  width: auto;
+  height: auto;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.overlay .close {
+  position: absolute;
+  top: 25px;
+  right: 476px;
+  text-decoration: none;
+  color: #fff;
+  opacity: 0;
+}
+
+.overlay:target .close {
+  animation: slideFade 0.5s 0.5s forwards;
+}
+
+.overlay img {
+  max-height: 100%;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+
+.overlay:target img {
+  animation: zoomFade 1s;
+}
+
+/* animation */
+@keyframes zoomFade {
+  0% {
+    transform: scale(0);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFade {
+  0% {
+    opacity: 0;
+    margin-top: -50px;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0;
+  }
+}

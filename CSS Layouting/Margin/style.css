@@ -1,0 +1,45 @@
+.satu {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(188, 255, 233);
+    /* contoh margin */
+    margin-top: 10px;
+    margin-left: 30px ;
+    margin-bottom: 40px;
+    margin-right: 10px;
+}
+
+.dua {
+    width: 100px;
+    height: 100px;
+    background-color: rgb(255, 206, 147);
+    /* overlapping margin, margin tidak saling menambahkan jika vertikal */
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.tiga {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(255, 162, 162);
+    /* negatif margin */
+    margin-top: -50px;
+}
+
+.empat {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(242, 255, 122);
+    margin-top: 30px;
+    /* margin auto */
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.lima {
+    width: 200px;
+    height: 200px;
+    background-color: rgb(184, 255, 125);
+    /* margin auto */
+    margin: 50px auto;
+}

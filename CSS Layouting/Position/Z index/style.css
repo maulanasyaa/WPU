@@ -1,0 +1,24 @@
+div {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+}
+
+.satu {
+    background-color: aquamarine;
+    z-index: 1;
+    /* z index untuk mengatur posisi tumpukan/sumbu z pada elemen non static (semakin besar z-index maka semakin depan) */
+}
+
+.dua {
+    background-color: salmon;
+    top: 100px;
+    left: 100px;
+}
+
+.tiga {
+    background-color: sandybrown;
+    top: 150px;
+    left: 150px;
+    z-index: 3;
+}

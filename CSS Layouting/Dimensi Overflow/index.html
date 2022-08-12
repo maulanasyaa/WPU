@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dimensi & Overflow</title>
+    <style>
+        .satu {
+            width: 200px;
+            height: 200px;
+            background-color: aquamarine;
+        }
+        .dua {
+            width: 150%;
+            background-color: rgb(255, 176, 176);
+        }
+        /* style bisa melebihi parent */
+
+        /* contoh overflow */
+        .overflow {
+            margin-top: 10px;
+            width: 200px;
+            height: 200px;
+            /* content melebihi tempat nya */
+            background-color: pink;
+            overflow: auto;
+            /* auto = menambahkan scroll jika content melebihi tempat nya
+            hidden = menyembunyikan content yg melebihi tempat
+            scroll = menambahkan scroll walau content tidak melebihi tempat nya */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="satu">
+  <div class="dua">
+        <p>
+            Hello world
+        </p>
+    </div>
+    </div>
+    <div class="overflow">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure nam sequi nulla, quod at quasi, quis dolorem explicabo doloremque accusamus tempora facere animi ad optio architecto. Quasi nihil magni cumque. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis laudantium porro blanditiis esse saepe quae temporibus ipsa voluptatem nobis deleniti illum officia veritatis neque pariatur, deserunt quia eaque ipsum reiciendis?</p>
+    </div>
+  
+</body>
+</html>

@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "Rubik";
+  src: url("Rubik-Regular.ttf") format("truetype");
+}
+
+h1 {
+  font-size: 100px;
+  text-align: center;
+  font-family: "Rubik", arial;
+}

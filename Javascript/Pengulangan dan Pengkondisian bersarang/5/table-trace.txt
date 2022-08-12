@@ -1,0 +1,34 @@
+          *          
+         ***
+        *****
+       *******
+      *********
+      *********
+       *******
+        *****
+         ***
+          *
+
+baris 1 = 5
+empty awal 1 = 5
+item = menggunakan 2 for 
+(contoh visualisasi)
+          1
+         121
+        12312
+       1234123
+      123451234
+empty awal 2 = 5
+        
+baris 2 = 5
+empty awal 1 = 1
+item = menggunakan 2 for 
+(contoh visualisasi)
+      123451234
+       1234123
+        12312
+         121
+          1
+empty awal 2 = 1
+        
+        

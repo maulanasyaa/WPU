@@ -1,0 +1,11 @@
+div {
+  width: 500px;
+  height: 300px;
+  border-radius: 0 50px 50px 50px;
+  background: radial-gradient(
+    circle farthest-corner at top left,
+    rgba(255, 192, 192, 1),
+    salmon
+  );
+  /* <tipe> ellipse/circle <jangkauan> closest-side/corner farthest-side/corner "at" <position>, color1, color2 */
+}

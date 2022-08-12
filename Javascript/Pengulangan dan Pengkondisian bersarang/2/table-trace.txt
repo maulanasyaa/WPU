@@ -1,0 +1,14 @@
+**********
+*********
+********
+*******
+******
+*****
+****
+***
+**
+*
+
+baris = 10
+item awal =10
+jumlah item = berkurang saat berpindah baris (contoh baris 1 j.item 10, baris 2 j.item 9)

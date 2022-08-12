@@ -1,0 +1,18 @@
+# # # # # 
+ # # # # #
+# # # # # 
+ # # # # #
+# # # # # 
+ # # # # #
+# # # # # 
+ # # # # #
+# # # # # 
+ # # # # #
+
+ baris = 5
+ visualisasi per baris :
+# # # # # 
+ # # # # #
+ item = 5 per baris
+ empty = 5 per baris
+ menggunakan ganjil genap
