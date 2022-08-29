@@ -35,3 +35,28 @@ function People(nama, umur, kota) {
 
 const people1 = new People("maul", 20, "karawang");
 const people2 = new People("syarip", 20, "karawang");
+
+// this
+// cara 1 - function declaration
+function halo() {
+  console.log(this);
+  console.log("halo");
+}
+this.halo();
+
+// cara 2 - object literal
+let obj = { a: 10, nama: "maul" };
+obj.halo = function () {
+  console.log(this);
+  console.log("halo");
+};
+obj.halo();
+// mengembalikan object yg bersangkutan
+
+// cara 3 - constructor
+function Halo() {
+  console.log(this);
+  console.log("halo");
+}
+new Halo();
+// this mengembalikan object yang baru dibuat
