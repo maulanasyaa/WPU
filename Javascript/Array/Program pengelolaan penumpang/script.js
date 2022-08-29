@@ -10,7 +10,7 @@ const tambahPenumpang = (namaPenumpang, penumpang) => {
     return penumpang;
   } else {
     // telusuri kursi dari awal
-    for (let i = 0; i < penumpang.length; i++) {
+    for (i in penumpang) {
       // jika ada kursi kosong
       if (penumpang[i] == undefined) {
         // tambah penumpang di kursi tersebut
@@ -48,7 +48,7 @@ const hapusPenumpang = (namaPenumpang, penumpang) => {
     return penumpang;
   } else {
     // telusuri seluruh kursi dari awal
-    for (let i = 0; i < penumpang.length; i++) {
+    for (i in penumpang) {
       // jika nama penumpang sesuai
       if (penumpang[i] == namaPenumpang) {
         // hapus penumpang dengan mengubah nama nya menjadi undefined
