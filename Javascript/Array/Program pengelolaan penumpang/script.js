@@ -1,4 +1,4 @@
-let penumpang = ["maul", undefined, "abdurahman"];
+let penumpang = [];
 
 // function tambah penumpang
 const tambahPenumpang = (namaPenumpang, penumpang) => {
@@ -31,6 +31,35 @@ const tambahPenumpang = (namaPenumpang, penumpang) => {
       else if (penumpang[i] == namaPenumpang) {
         // tampilkan pesan kesalahannya
         console.log(`${namaPenumpang} sudah ada di dalam kendaraan`);
+        // kembalikan isi array & keluar dari function
+        return penumpang;
+      }
+    }
+  }
+};
+
+// function hapus penumpang
+const hapusPenumpang = (namaPenumpang, penumpang) => {
+  // jika kendaraan kosong
+  if (penumpang.length == 0) {
+    // tampilkan pesan bahwa kedaraan kosong
+    console.log("Kendaraan sudah kosong");
+    // kembalikan isi array & keluar dari function
+    return penumpang;
+  } else {
+    // telusuri seluruh kursi dari awal
+    for (let i = 0; i < penumpang.length; i++) {
+      // jika nama penumpang sesuai
+      if (penumpang[i] == namaPenumpang) {
+        // hapus penumpang dengan mengubah nama nya menjadi undefined
+        penumpang[i] = undefined;
+        // kembalikan isi array & keluar dari function
+        return penumpang;
+      }
+      // jika tidak ada yang sesuai
+      else if (i == penumpang.length - 1) {
+        // tampilkan pesan kesalahannya
+        console.log(`${namaPenumpang} tidak ada di dalam kendaraan`);
         // kembalikan isi array & keluar dari function
         return penumpang;
       }
