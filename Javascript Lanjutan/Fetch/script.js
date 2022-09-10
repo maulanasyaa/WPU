@@ -33,11 +33,39 @@
 // Refactoring / memperbaiki code di atas
 const searchButton = document.querySelector(".search-button");
 searchButton.addEventListener("click", async function () {
-  // async untuk memberi tau bahwa didalam function tsb ada asynchronous
-  const inputKeyword = document.querySelector(".input-keyword");
-  const movies = await getMovies(inputKeyword.value); // await memberi tau tepat nya bagian mana yang merupakan asynchoronous
-  updateUI(movies);
+  try {
+    // async untuk memberi tau bahwa didalam function tsb ada asynchronous
+    const inputKeyword = document.querySelector(".input-keyword");
+    const movies = await getMovies(inputKeyword.value); // await memberi tau tepat nya bagian mana yang merupakan asynchoronous
+    updateUI(movies);
+  } catch (err) {
+    // console.log(err);
+    alert(err);
+  }
 });
+
+function getMovies(keyword) {
+  return fetch("http://www.omdbapi.com/?apikey=52792095&s=" + keyword)
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(response.statusText);
+      }
+      return response.json();
+    })
+    .then(response => {
+      if (response.Response === "False") {
+        throw new Error(response.Error);
+      }
+      return response.Search;
+    });
+}
+
+function updateUI(movies) {
+  let cards = "";
+  movies.forEach(m => (cards += showCards(m)));
+  const movieContainer = document.querySelector(".movie-container");
+  movieContainer.innerHTML = cards;
+}
 
 // event binding
 document.addEventListener("click", async function (e) {
@@ -58,19 +86,6 @@ function updateUIDetail(m) {
   const movieDetail = showMovieDetail(m);
   const modalBody = document.querySelector(".modal-body");
   modalBody.innerHTML = movieDetail;
-}
-
-function getMovies(keyword) {
-  return fetch("http://www.omdbapi.com/?apikey=52792095&s=" + keyword)
-    .then(response => response.json())
-    .then(response => response.Search);
-}
-
-function updateUI(movies) {
-  let cards = "";
-  movies.forEach(m => (cards += showCards(m)));
-  const movieContainer = document.querySelector(".movie-container");
-  movieContainer.innerHTML = cards;
 }
 
 function showCards(m) {
